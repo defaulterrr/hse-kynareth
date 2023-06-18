@@ -1,0 +1,19 @@
+apiVersion: kubescheduler.config.k8s.io/v1beta1
+kind: KubeSchedulerConfiguration
+clientConnection:
+  kubeconfig: ../kubeconfig-ext.yaml
+  qps: 600
+percentageOfNodesToScore: 100
+leaderElection:
+  leaderElect: true
+profiles:
+ - pluginConfig:
+   - args:
+      apiVersion: kubescheduler.config.k8s.io/v1beta1
+      kind: NodeResourcesLeastAllocatedArgs
+      resources:
+      - name: cpu
+        weight: 100
+      - name: memory
+        weight: 2
+     name: NodeResourcesLeastAllocated

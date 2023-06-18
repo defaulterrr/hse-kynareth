@@ -1,0 +1,21 @@
+apiVersion: kube-scheduler-simulator-config/v1alpha1
+kind: SimulatorConfiguration
+
+port: 1212
+
+etcdURL: "http://127.0.0.1:2379"
+
+corsAllowedOriginList:
+  - "http://localhost:3000"
+
+kubeConfig: ""
+
+kubeApiHost: "127.0.0.1"
+
+kubeApiPort: 3131
+
+kubeSchedulerConfigPath: ""
+
+externalImportEnabled: false
+
+externalSchedulerEnabled: true

@@ -1,0 +1,17 @@
+apiVersion: kubescheduler.config.k8s.io/v1beta2
+kind: KubeSchedulerConfiguration
+clientConnection:
+  kubeconfig: /Users/svpetrov/d/k8s-recom/scheduler-playground/configs/kubeconfig/kubeconfig.yaml
+  qps: 600
+percentageOfNodesToScore: 100
+leaderElection:
+  leaderElect: true
+profiles:
+  pluginConfig:
+    - name: NodeResourcesFit
+      args:
+        scoringStrategy:
+          resources:
+            - name: cpu
+              weight: 100
+          type: LeastAllocated
