@@ -1,4 +1,4 @@
-module o3.ru/svpetrov/scheduler-playground
+module github.com/defaulterrr/scheduler-playground
 
 go 1.20
 

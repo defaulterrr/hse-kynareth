@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/defaulterrr/scheduler-playground/pkg/insights"
+	"github.com/defaulterrr/scheduler-playground/pkg/snapshot"
 	"github.com/spf13/pflag"
-	"o3.ru/svpetrov/scheduler-playground/pkg/insights"
-	"o3.ru/svpetrov/scheduler-playground/pkg/snapshot"
 )
 
 var snapshotFile = pflag.String("snapshot", "snapshot.json", "filepath to the snapshot file in JSON format")
